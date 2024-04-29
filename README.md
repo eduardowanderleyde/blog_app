@@ -1,24 +1,62 @@
-# README
+# Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este README documenta os passos necessários para executar e configurar o aplicativo Blog.
 
-Things you may want to cover:
+https://github.com/eduardowanderleyde/blog_app/assets/103546791/a646f6d4-b3d0-44bb-9d10-ee1805746f51
 
-* Ruby version
+## Versão do Ruby
 
-* System dependencies
+O aplicativo foi desenvolvido utilizando Ruby 3.0.0.
 
-* Configuration
+## Dependências do Sistema
 
-* Database creation
+Antes de executar o aplicativo, certifique-se de ter as seguintes dependências instaladas:
 
-* Database initialization
+- Ruby 3.0.0
+- PostgreSQL (ou outro banco de dados compatível)
+- Node.js
+- Yarn (opcionalmente para gerenciamento de pacotes JavaScript)
 
-* How to run the test suite
+## Configuração
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Clone este repositório:
 
-* Deployment instructions
+    ```
+    git clone https://github.com/eduardowanderleyde/blog_app.git
+    ```
 
-* ...
+2. Instale as dependências do Ruby:
+
+    ```
+    bundle install
+    ```
+
+3. Instale as dependências do JavaScript (se estiver usando Yarn):
+
+    ```
+    yarn install
+    ```
+
+## Criação do Banco de Dados
+
+Para configurar o banco de dados:
+
+1. Copie o arquivo de configuração de banco de dados de exemplo:
+
+    ```
+    cp config/database.yml.example config/database.yml
+    ```
+
+2. Edite `config/database.yml` conforme necessário para configurar seu banco de dados.
+
+3. Crie o banco de dados e execute as migrações:
+
+    ```
+    rails db:create
+    rails db:migrate
+    ```
+
+## Inicialização do Banco de Dados
+
+Se precisar inicializar o banco de dados com dados iniciais, execute:
+
